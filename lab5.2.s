@@ -11,7 +11,7 @@
 ; ; 4.Viết chương trình con tính tổng các số nguyên tố trong một chuỗi số
 
 
-     ; area reset, data, readwrite
+     ; area reset, data, readonly
          ; dcd 0x20001000
          ; dcd reset_handler
 
@@ -20,7 +20,21 @@
          ; entry
          ; export reset_handler
 
- ; reset_handler
-    ; mov r0, #1
+; reset_handler
+	; mov r0, #2 ; input: 10 -> 1
+; start
+	; mov r1, #0 ; parity
+
+	; and r2, r0, #1
+	; cmp r2, #0
+	; beq next
+	; eor r1, #1
+; next
+	; lsr r0, #1	
+	; cmp r0, #0
+	; bne start
+; end
+	; b end
+
 
     ; end

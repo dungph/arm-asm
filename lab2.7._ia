@@ -2,4 +2,4 @@
 -I C:\Keil\ARM\RV31\INC 
 -I C:\Keil\ARM\CMSIS\Include 
 -I C:\Keil\ARM\Inc\ST\STM32F10x 
---list "lab3.1.lst" --xref -o "lab3.1.o" --depend "lab3.1.d" "lab3.1.s"
+--list "lab2.7.lst" --xref -o "lab2.7.o" --depend "lab2.7.d" "lab2.7.s"
