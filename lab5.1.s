@@ -9,3 +9,27 @@
 ; 2.Viết chương trình xác định mã chẵn lẻ của các chuổi bit.
 ; 3.Viết chương trình con đếm các số nguyên tố <= N.
 ; 4.Viết chương trình con tính tổng các số nguyên tố trong một chuỗi số
+
+
+     area reset, data, readwrite
+         dcd 0x20001000
+         dcd reset_handler
+
+
+myhex dcb "abc", cr
+mydec dcb "98", cr
+myoct dcb "76", cr
+mybin dcb "101", cr
+result dcb "0000000", cr
+
+
+
+
+     area mycode, code, readonly
+         entry
+         export reset_handler
+
+ reset_handler
+    mov r0, #1
+
+    end
